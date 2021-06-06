@@ -33,7 +33,7 @@ namespace AppServiceDemo
             });
 
             services.AddDbContext<AppServiceDemoContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("AppServiceDemoContext")));
+                    options.UseSqlServer(Configuration.GetConnectionString("AppServiceDemoContextNew")));
 
         }
 
