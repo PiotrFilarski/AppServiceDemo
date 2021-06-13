@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <script>
-    console.log('elo');
+    const Http = new XMLHttpRequest();
+    const url = 'https://appserviceptrfrsk.azurewebsites.net/.auth/me';
+    Http.open("GET", url);
+    Http.send();
+
+    Http.onreadystatechange = (e) => {
+        console.log(Http.responseText)
+    }
 </script>
 <body>
     <header>
