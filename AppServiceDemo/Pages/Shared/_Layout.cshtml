@@ -14,7 +14,9 @@
     Http.send();
 
     Http.onreadystatechange = (e) => {
-        console.log(Http.responseText)
+        var user = JSON.parse(Http.responseText)[0]["user_id"];
+        console.log(JSON.parse(Http.responseText)[0]["user_id"]);
+        document.getElementById('user_login').innerHTML = user;
     }
 </script>
 <body>
@@ -39,6 +41,8 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" href="/.auth/logout">Sing out</a>
+                        </li>
+                        <li class="nav-item" id="user_login">
                         </li>
                     </ul>
                 </div>
